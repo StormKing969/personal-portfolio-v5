@@ -1,10 +1,17 @@
 import React from "react";
 import { HeroText } from "../constants/index.js";
 import Button from "../components/Button.jsx";
+import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 
+/**
+ * Hero section component that displays the main introductory content of the page.
+ *
+ * @returns {JSX.Element} The Hero section containing text, a button, and a 3D model.
+ */
 const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
+      {/* Background image */}
       <div className={"absolute top-0 left-0 z-10"}>
         <img src={"/images/bg.png"} alt={"background"} />
       </div>
@@ -44,9 +51,10 @@ const Hero = () => {
               <h1>that Deliver Results</h1>
             </div>
 
+            {/* Introductory paragraph */}
             <p
               className={
-                "text-white-50 md:text-xl relative z-10 pointer-events-none"
+                "text-white-50 md:text-xl relative z-10 pointer-events-none lg:w-1/2"
               }
             >
               "Hi, I'm Saj — a curious mind fueled by creativity, connection,
@@ -54,6 +62,7 @@ const Hero = () => {
               connaissance!
             </p>
 
+            {/* Call-to-action button */}
             <Button
               className={"md:w-80 md:h-16 w-60 h-12"}
               id={"button"}
@@ -63,8 +72,14 @@ const Hero = () => {
         </header>
 
         {/* RIGHT: 3D MODEL */}
+        <figure>
+          <div className={"hero-3d-layout"}>
+            <HeroExperience />
+          </div>
+        </figure>
       </div>
     </section>
   );
 };
+
 export default Hero;

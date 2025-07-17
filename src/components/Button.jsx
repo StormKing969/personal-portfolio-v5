@@ -11,12 +11,26 @@ import React from "react";
  */
 const Button = ({ className, text, id }) => {
   return (
-    <a className={`${className ?? ""} cta-wrapper`}>
+    <a
+      onClick={(e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        if (id) {
+          const element = document.getElementById("counter"); // Get the element with ID "counter"
+          if (element) {
+            const offset = window.innerHeight * 0.15; // Calculate offset based on viewport height
+            const elementPosition =
+              element.getBoundingClientRect().top + window.scrollY - offset; // Calculate the scroll position
+            window.scrollTo({ top: elementPosition, behavior: "smooth" }); // Smoothly scroll to the calculated position
+          }
+        }
+      }}
+      className={`${className ?? ""} cta-wrapper`} // Apply additional CSS classes if provided
+    >
       <div className={"cta-button group"}>
-        <div className={"bg-circle"} />
-        <p className={"text"}>{text}</p>
+        <div className={"bg-circle"} /> {/* Background circle for styling */}
+        <p className={"text"}>{text}</p> {/* Display the button text */}
         <div className={"arrow-wrapper"}>
-          <img src={"/images/arrow-down.svg"} alt="arrow" />
+          <img src={"/images/arrow-down.svg"} alt="arrow" /> {/* Arrow icon */}
         </div>
       </div>
     </a>

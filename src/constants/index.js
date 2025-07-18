@@ -28,3 +28,18 @@ export const CounterData = [
   { value: "100", suffix: "+", label: "GitHub Commits" },
   { value: "3", suffix: "", label: "Mentorship Provided" },
 ];
+
+/**
+ * Array of objects representing navigation links for the website.
+ * Each object contains a name and a link to a specific section of the page.
+ *
+ * @type {Array<{name: string, link: string}>}
+ * @property {string} name - The name of the navigation link.
+ * @property {string} link - The URL or anchor link for the navigation item.
+ */
+export const NavigationLinks = [
+  { name: "Work", link: "#work" },
+  { name: "Experience", link: "#experience" },
+  { name: "Skills", link: "#skills" },
+  { name: "Testimonials", link: "#testimonials" },
+];

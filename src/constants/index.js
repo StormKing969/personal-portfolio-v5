@@ -43,3 +43,17 @@ export const NavigationLinks = [
   { name: "Skills", link: "#skills" },
   { name: "Testimonials", link: "#testimonials" },
 ];
+
+/**
+ * Array of objects representing company logos and their associated names.
+ * Each object contains the file path to the logo image and the company name.
+ *
+ * @type {Array<{imgPath: string, name: string}>}
+ * @property {string} imgPath - The file path to the company logo image.
+ * @property {string} name - The name of the company.
+ */
+export const CompanyLogosList = [
+  { imgPath: "/images/logos/company-logo-1.png", name: "General Motors Inc." },
+  { imgPath: "/images/logos/company-logo-2.png", name: "CVS Health" },
+  { imgPath: "/images/logos/company-logo-3.png", name: "Verbotics" },
+];

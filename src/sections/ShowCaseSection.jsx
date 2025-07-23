@@ -66,7 +66,7 @@ const ShowCaseSection = () => {
           <div className={"first-project-wrapper"} ref={project1Ref}>
             <div className={"image-wrapper"}>
               <img
-                src={"/images/project1.png"} // Image source for the first project
+                src={"/images/projects/project1.png"} // Image source for the first project
                 alt="The Personal Movie Review App" // Alt text for accessibility
               />
             </div>
@@ -91,7 +91,7 @@ const ShowCaseSection = () => {
             <div className={"project"} ref={project2Ref}>
               <div className={"image-wrapper bg-[#ffefdb]"}>
                 <img
-                  src={"/images/project2.png"} // Image source for the second project
+                  src={"/images/projects/project2.png"} // Image source for the second project
                   alt="3D Earth Plane" // Alt text for accessibility
                   className={"py-3"}
                 />
@@ -107,7 +107,7 @@ const ShowCaseSection = () => {
             <div className={"project"} ref={project3Ref}>
               <div className={"image-wrapper bg-[#ffe7eb]"}>
                 <img
-                  src={"/images/project3.png"} // Image source for the third project
+                  src={"/images/projects/project3.png"} // Image source for the third project
                   alt="Advice Generator" // Alt text for accessibility
                   className={"py-3"}
                 />

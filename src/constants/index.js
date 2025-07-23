@@ -7,10 +7,10 @@
  * @property {string} imgPath - The file path to the associated image.
  */
 export const HeroText = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Ideas", imgPath: "/images/components/ideas.svg" },
+  { text: "Concepts", imgPath: "/images/components/concepts.svg" },
+  { text: "Designs", imgPath: "/images/components/designs.svg" },
+  { text: "Code", imgPath: "/images/components/code.svg" },
 ];
 
 /**
@@ -56,4 +56,25 @@ export const CompanyLogosList = [
   { imgPath: "/images/logos/company-logo-1.png", name: "General Motors Inc." },
   { imgPath: "/images/logos/company-logo-2.png", name: "CVS Health" },
   { imgPath: "/images/logos/company-logo-3.png", name: "Verbotics" },
+];
+
+export const AbilitiesList = [
+  {
+    imgPath: "/images/abilities/time.png",
+    title: "Commitment to Timely Delivery",
+    description:
+      "I value timeliness as a key part of professionalism—delivering work on schedule without compromising quality. By managing priorities effectively and staying organized, I ensure that deadlines are met and expectations are exceeded.",
+  },
+  {
+    imgPath: "/images/abilities/chat.png",
+    title: "Reliable & Clear Communication",
+    description:
+      "I prioritize clear, consistent, and timely communication to ensure alignment across teams and stakeholders. Whether collaborating on code or coordinating project goals, I believe reliability in communication builds trust and drives successful outcomes.",
+  },
+  {
+    imgPath: "/images/abilities/seo.png",
+    title: "Commitment to Quality",
+    description:
+      "I’m committed to building software that is reliable, maintainable, and user-focused, with an emphasis on performance, accessibility, and clean architecture. Quality is at the core of everything I do—from thoughtful design to rigorous testing and continuous improvement.",
+  },
 ];

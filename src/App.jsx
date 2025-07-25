@@ -4,6 +4,7 @@ import ShowCaseSection from "./sections/ShowCaseSection.jsx";
 import NavBar from "./components/NavBar.jsx";
 import LogoSection from "./sections/LogoSection.jsx";
 import FeatureCards from "./sections/FeatureCards.jsx";
+import Experience from "./sections/Experience.jsx";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <ShowCaseSection />
       <LogoSection />
       <FeatureCards />
+      <Experience />
     </>
   );
 };

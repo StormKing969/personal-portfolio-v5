@@ -23,7 +23,7 @@ export const HeroText = [
  * @property {string} label - The descriptive label for the counter.
  */
 export const CounterData = [
-  { value: "5", suffix: "+", label: "Years of Experience" },
+  { value: "3", suffix: "+", label: "Years of Experience" },
   { value: "100", suffix: "+", label: "Completed Projects" },
   { value: "100", suffix: "+", label: "GitHub Commits" },
   { value: "3", suffix: "", label: "Mentorship Provided" },
@@ -76,5 +76,61 @@ export const AbilitiesList = [
     title: "Commitment to Quality",
     description:
       "I’m committed to building software that is reliable, maintainable, and user-focused, with an emphasis on performance, accessibility, and clean architecture. Quality is at the core of everything I do—from thoughtful design to rigorous testing and continuous improvement.",
+  },
+];
+
+export const WorkExperienceList = [
+  {
+    companyDescription:
+      "General Motors Inc. (GM) is a global automotive company headquartered in Detroit, Michigan, known for designing, manufacturing, and selling vehicles under brands like Chevrolet, GMC, Cadillac, and Buick. With a growing focus on electric and autonomous vehicles, GM is leading innovation in sustainable transportation and mobility solutions worldwide.",
+    companyImgPath: "/images/experience/exp1.png",
+    logoPath: "/images/experience/logo1.png",
+    companyName: "General Motors Inc.",
+    companyLink: "https://www.gm.com",
+    colorCode: null,
+    title: "Software Engineer",
+    duration: "May 2022 - Present",
+    responsibilities: [
+      "Spearheaded UI modernization using React, TypeScript, and Bootstrap to enhance accessibility and maintainability.",
+      "Strengthened enterprise security by optimizing access control and authentication APIs, mitigating risks, and improving protection against threats.",
+      "Designed and implemented role-based access control (RBAC) for improved scalability and security compliance.",
+      "Led Kafka messaging system development, optimizing event-driven architecture and improving message processing efficiency across distributed applications.",
+      "Integrated GitHub Copilot and ChatGPT into development workflows to generate JavaDocs, unit tests, and technical documentation, enhancing development speed and quality.",
+      "Conducted backward compatibility assessments, ensuring seamless integration of new features while preserving system stability.",
+      "Led code reviews, architectural discussions, and approval processes, shaping technical direction and maintaining development standards.",
+      "Authored detailed technical stories, defining structured development roadmaps for engineers to execute effectively.",
+    ],
+  },
+  {
+    companyDescription:
+      "CVS Health is a leading American healthcare company that integrates pharmacy services, retail, and insurance through its brands like CVS Pharmacy, MinuteClinic, and Aetna. It focuses on improving health outcomes by providing accessible, affordable care across a wide range of services from prescriptions to primary care.",
+    companyImgPath: "/images/experience/exp2.png",
+    logoPath: "/images/experience/logo2.png",
+    companyName: "CVS Health",
+    companyLink: "https://www.cvshealth.com/",
+    colorCode: null,
+    title: "Operations Supervisor",
+    duration: "June 2020 - April 2022",
+    responsibilities: [
+      "Managed daily store operations, ensuring financial accuracy and adherence to regulatory compliance.",
+      "Conducted proactive staffing and inventory assessments, optimizing workflows for efficiency and improved customer satisfaction.",
+      "Resolved customer concerns through team-driven problem-solving, fostering a positive environment aligned with company objectives.",
+    ],
+  },
+  {
+    companyDescription:
+      "Verbotics AI is a technology-driven company specializing in artificial intelligence solutions, with a focus on modernizing IT infrastructure and optimizing information access. It develops smart, scalable tools that enhance search functionality, automate processes, and support data-driven decision-making across various industries.",
+    companyImgPath: "/images/experience/exp3.png",
+    logoPath: null,
+    companyName: "Verbotics AI",
+    companyLink: "https://verboticsai.com/",
+    colorCode: "#005CC0",
+    title: "Project Leader & Frontend Developer",
+    duration: "January 2020 - May 2020",
+    responsibilities: [
+      "Led a modernization initiative for IT infrastructure, assessing medical usage metrics and defining access control improvements.",
+      "Designed and implemented Al-powered search functionality, improving efficiency in information retrieval.",
+      "Directed project execution through effective delegation, delivering a comprehensive proposal, prototype, and stakeholder presentation for approval and implementation.",
+    ],
   },
 ];

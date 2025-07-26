@@ -2,8 +2,57 @@ import React from "react";
 import TitleHeader from "../components/TitleHeader.jsx";
 import { WorkExperienceList } from "../constants/index.js";
 import GlowCard from "../components/GlowCard.jsx";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Experience = () => {
+  useGSAP(() => {
+    gsap.utils.toArray(".timeline-card").forEach((card) => {
+      gsap.from(card, {
+        xPercent: -100,
+        opacity: 0,
+        transformOrigin: "left left",
+        duration: 1,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%",
+        },
+      });
+    });
+
+    gsap.to(".timeline", {
+      transformOrigin: "bottom bottom",
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".timeline",
+        start: "top center",
+        end: "70% center",
+        onUpdate: (self) => {
+          gsap.to(".timeline", {
+            scaleY: 1 - self.progress,
+          });
+        },
+      },
+    });
+
+    gsap.utils.toArray(".expText").forEach((text) => {
+      gsap.from(text, {
+        xPercent: 0,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: text,
+          start: "top 60%",
+        },
+      });
+    });
+  }, []);
+
   return (
     <section
       id={"experience"}
@@ -19,7 +68,7 @@ const Experience = () => {
           <div className={"relative z-50 xl:space-y-32 space-y-10"}>
             {WorkExperienceList.map((workExperience, index) => (
               <div key={index} className={"exp-card-wrapper"}>
-                <div className={"xl:w-2/6 flex items-center"}>
+                <div className={"timeline-card xl:w-2/6 flex items-center"}>
                   <GlowCard data={workExperience} index={index}>
                     <div className={"flex justify-center"}>
                       <img
@@ -44,17 +93,11 @@ const Experience = () => {
                       }
                     >
                       <div className={"timeline-logo"}>
-                        {workExperience.logoPath !== null ? (
-                          <img
-                            className={"rounded-full"}
-                            src={workExperience.logoPath}
-                            alt={workExperience.companyName}
-                          />
-                        ) : (
-                          <div
-                            className={`h-full w-full bg-[${workExperience.colorCode}]`}
-                          />
-                        )}
+                        <img
+                          className={"h-[40px] w-[40px]"}
+                          src={workExperience.logoPath}
+                          alt={workExperience.companyName}
+                        />
                       </div>
 
                       <div>
@@ -64,7 +107,7 @@ const Experience = () => {
                         <p className={"my-5 text-white-50"}>
                           📅 {workExperience.duration}
                         </p>
-                        <p className={"text-[#839cb5 italic"}>
+                        <p className={"text-[#839cb5] italic"}>
                           Responsibilities
                         </p>
                         <ul

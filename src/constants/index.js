@@ -87,7 +87,6 @@ export const WorkExperienceList = [
     logoPath: "/images/experience/logo1.png",
     companyName: "General Motors Inc.",
     companyLink: "https://www.gm.com",
-    colorCode: null,
     title: "Software Engineer",
     duration: "May 2022 - Present",
     responsibilities: [
@@ -108,7 +107,6 @@ export const WorkExperienceList = [
     logoPath: "/images/experience/logo2.png",
     companyName: "CVS Health",
     companyLink: "https://www.cvshealth.com/",
-    colorCode: null,
     title: "Operations Supervisor",
     duration: "June 2020 - April 2022",
     responsibilities: [
@@ -121,10 +119,9 @@ export const WorkExperienceList = [
     companyDescription:
       "Verbotics AI is a technology-driven company specializing in artificial intelligence solutions, with a focus on modernizing IT infrastructure and optimizing information access. It develops smart, scalable tools that enhance search functionality, automate processes, and support data-driven decision-making across various industries.",
     companyImgPath: "/images/experience/exp3.png",
-    logoPath: null,
+    logoPath: "/images/experience/logo3.png",
     companyName: "Verbotics AI",
     companyLink: "https://verboticsai.com/",
-    colorCode: "#005CC0",
     title: "Project Leader & Frontend Developer",
     duration: "January 2020 - May 2020",
     responsibilities: [

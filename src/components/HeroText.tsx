@@ -35,7 +35,6 @@ const HeroText = () => {
           >
             A Developer <br /> Dedicated to Crafting
           </motion.p>
-
           <motion.div
             variants={variants}
             initial="hidden"
@@ -81,7 +80,6 @@ const HeroText = () => {
           >
             Building
           </motion.p>
-
           <motion.div
             variants={variants}
             initial="hidden"

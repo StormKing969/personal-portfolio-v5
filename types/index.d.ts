@@ -15,10 +15,11 @@ export interface ProjectType {
   id: number;
   title: string;
   description: string;
-  subDescription: string;
-  href: string;
-  logoUrl: string;
-  imageUrl: string;
+  subDescription: string[];
+  repoLink: string;
+  liveLink: string | null;
+  projectLogo: string | null;
+  projectImage: string | null;
   tags: ProjectTag[];
 }
 
@@ -44,7 +45,7 @@ export interface ExperienceType {
 export interface ReviewType {
   name: string;
   username: string;
-  jobTitle: string
+  jobTitle: string;
   userProfileLink: string;
   content: string;
   imgUrl: string | null;

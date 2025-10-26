@@ -16,7 +16,7 @@ const Card = ({
     <motion.img
       className={"absolute w-15 cursor-grab"}
       src={image}
-      alt="Card Image"
+      alt="card image"
       style={style}
       whileHover={{ scale: 1.05 }}
       drag={true}

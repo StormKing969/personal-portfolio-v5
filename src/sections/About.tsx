@@ -1,18 +1,18 @@
-import {
-  AboutMeQualities,
-  Card1AboutMeContext,
-  Card1AboutMeTitle,
-  Card3AboutMeContext,
-  Card3AboutMeTitle,
-  Card4AboutMeContext,
-  Card5AboutMeContext,
-  Card5AboutMeTitle,
-} from "../../constants";
 import Card from "../components/Card.tsx";
 import { useRef } from "react";
 import { Globe } from "../components/Globe.tsx";
 import CopyEmailButton from "../components/CopyEmailButton.tsx";
 import { Frameworks } from "../components/Frameworks.tsx";
+import {
+  Card1Context,
+  Card1Title,
+  Card3Context,
+  Card3Title,
+  Card4Context,
+  Card5Context,
+  Card5Title,
+  Qualities,
+} from "../../constants/about";
 
 const About = () => {
   const grid2Container = useRef<HTMLDivElement>(null);
@@ -35,8 +35,8 @@ const About = () => {
             }
           />
           <div className={"z-10"}>
-            <p className={"head-text"}>{Card1AboutMeTitle}</p>
-            <p className={"subtext"}>{Card1AboutMeContext}</p>
+            <p className={"head-text"}>{Card1Title}</p>
+            <p className={"subtext"}>{Card1Context}</p>
           </div>
 
           <div
@@ -55,7 +55,7 @@ const About = () => {
             <p className={"flex items-end text-5xl text-gray-500"}>
               CODE IS CRAFT
             </p>
-            {AboutMeQualities.map((item, i) => (
+            {Qualities.map((item, i) => (
               <Card
                 containerRef={grid2Container}
                 key={i}
@@ -70,8 +70,8 @@ const About = () => {
         {/*  Grid 3  */}
         <div className={"grid-black-color grid-3"}>
           <div className={"z-10 w-[50%]"}>
-            <p className={"head-text"}>{Card3AboutMeTitle}</p>
-            <p className={"subtext"}>{Card3AboutMeContext}</p>
+            <p className={"head-text"}>{Card3Title}</p>
+            <p className={"subtext"}>{Card3Context}</p>
           </div>
           <figure className={"absolute left-[30%] top-[10%]"}>
             <Globe />
@@ -85,7 +85,7 @@ const About = () => {
               "flex flex-col items-center justify-center gap-4 size-full"
             }
           >
-            <p className={"text-center head-text"}>{Card4AboutMeContext}</p>
+            <p className={"text-center head-text"}>{Card4Context}</p>
             <CopyEmailButton />
           </div>
         </div>
@@ -93,8 +93,8 @@ const About = () => {
         {/*  Grid 5  */}
         <div className={"grid-default-color grid-5"}>
           <div className={"z-10 w-[50%]"}>
-            <p className={"head-text"}>{Card5AboutMeTitle}</p>
-            <p className={"subtext"}>{Card5AboutMeContext}</p>
+            <p className={"head-text"}>{Card5Title}</p>
+            <p className={"subtext"}>{Card5Context}</p>
           </div>
 
           <div

@@ -1,6 +1,7 @@
 import Navbar from "./sections/Navbar.tsx";
 import Hero from "./sections/Hero.tsx";
 import About from "./sections/About.tsx";
+import Projects from "./sections/Projects.tsx";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
+      <Projects />
     </main>
   );
 };

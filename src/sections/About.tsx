@@ -4,10 +4,15 @@ import {
   Card1AboutMeTitle,
   Card3AboutMeContext,
   Card3AboutMeTitle,
+  Card4AboutMeContext,
+  Card5AboutMeContext,
+  Card5AboutMeTitle,
 } from "../../constants";
 import Card from "../components/Card.tsx";
 import { useRef } from "react";
 import { Globe } from "../components/Globe.tsx";
+import CopyEmailButton from "../components/CopyEmailButton.tsx";
+import { Frameworks } from "../components/Frameworks.tsx";
 
 const About = () => {
   const grid2Container = useRef<HTMLDivElement>(null);
@@ -74,10 +79,32 @@ const About = () => {
         </div>
 
         {/*  Grid 4  */}
-        <div className={"grid-special-color grid-4"}></div>
+        <div className={"grid-special-color grid-4"}>
+          <div
+            className={
+              "flex flex-col items-center justify-center gap-4 size-full"
+            }
+          >
+            <p className={"text-center head-text"}>{Card4AboutMeContext}</p>
+            <CopyEmailButton />
+          </div>
+        </div>
 
         {/*  Grid 5  */}
-        <div className={"grid-default-color grid-5"}></div>
+        <div className={"grid-default-color grid-5"}>
+          <div className={"z-10 w-[50%]"}>
+            <p className={"head-text"}>{Card5AboutMeTitle}</p>
+            <p className={"subtext"}>{Card5AboutMeContext}</p>
+          </div>
+
+          <div
+            className={
+              "absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125"
+            }
+          >
+            <Frameworks />
+          </div>
+        </div>
       </div>
     </section>
   );

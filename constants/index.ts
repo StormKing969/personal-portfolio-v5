@@ -17,12 +17,12 @@ export const NavLinks = [
   },
 ];
 
-export const FlipHeroTextWords = ["Secure", "Modern", "Scalable"];
+export const FlipHeroTextWords = ["Secure", "Contemporary", "Scalable"];
 
 export const Card1AboutMeTitle = "Hi, I'm Sajana Wijesinghe";
 
 export const Card1AboutMeContext =
-  "Over the last 4 years, I developed my frontend and backend skills to deliver dynamic software and web applications.";
+  "Over the past four years I have advanced both frontend and backend capabilities to deliver robust, production-grade web applications.";
 
 export const AboutMeQualities = [
   {
@@ -67,7 +67,35 @@ export const AboutMeQualities = [
   },
 ];
 
-export const Card3AboutMeTitle = "Time Zone";
+export const Card3AboutMeTitle = "Location";
 
 export const Card3AboutMeContext =
-  "I'm based in Centerville, MA and I'm open to remote/hybrid/onsite work as well as relocation";
+  "Located in Massachusetts; available for remote, hybrid, or on-site roles and open to relocation.";
+
+export const Card4AboutMeContext = "Interested in collaborating on a project?";
+
+export const EmailAddress = "sajanawij@gmail.com";
+
+export const Card5AboutMeSkills = [
+  "auth0.svg",
+  "azure.svg",
+  "css3.svg",
+  "git.svg",
+  "github.svg",
+  "html5.svg",
+  "javascript.svg",
+  "microsoft.svg",
+  "microsoftsqlserver.svg",
+  "react.svg",
+  "stripe.svg",
+  "tailwindcss.svg",
+  "threejs.svg",
+  "visualstudiocode.svg",
+  "vitejs.svg",
+  "wordpress.svg",
+];
+
+export const Card5AboutMeTitle = "Technical Expertise";
+
+export const Card5AboutMeContext =
+  "Proficient in a broad set of languages, frameworks, and tools for building reliable, scalable applications.";

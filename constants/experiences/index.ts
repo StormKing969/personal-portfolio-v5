@@ -1,6 +1,8 @@
-import { ExperienceType } from "../../types";
+import type {ExperienceType} from "../../types";
 
-export const Experiences: ExperienceType[] = [
+export const ExperienceTitle: string = "My Work Experience";
+
+export const ProfessionalExperiences: ExperienceType[] = [
   {
     title: "Full-Stack Developer",
     company: "Freelancer",

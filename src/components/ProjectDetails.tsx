@@ -1,10 +1,11 @@
 import { motion } from "motion/react";
-import type { ProjectType } from "../../types";
+import type { PreviewType, ProjectType } from "../../types";
 import type { Dispatch, SetStateAction } from "react";
 
 type ProjectDetailsProps = ProjectType & {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
+  setPreview: Dispatch<SetStateAction<PreviewType | null>>;
 };
 
 const ProjectDetails = ({
@@ -18,7 +19,10 @@ const ProjectDetails = ({
   tags,
   isOpen,
   setIsOpen,
+  setPreview,
 }: ProjectDetailsProps) => {
+  setPreview(null);
+
   return (
     <div
       className={
@@ -52,14 +56,16 @@ const ProjectDetails = ({
         <div className={"p-5"}>
           <h5 className={"mb-2 text-2xl font-bold text-white"}>{title}</h5>
           <p className={"mb-3 font-normal text-neutral-400"}>{description}</p>
-          {subDescription &&
-            subDescription.map((desc: string, index: number) => (
-              <p key={index} className={"mb-3 font-normal text-neutral-400"}>
-                {desc}
-              </p>
-            ))}
+          <ul>
+            {subDescription &&
+              subDescription.map((desc: string, index: number) => (
+                <li key={index} className={"mb-3 ml-6 font-normal text-neutral-400 list-disc"}>
+                  {desc}
+                </li>
+              ))}
+          </ul>
           <div className={"flex items-center justify-between mt-4"}>
-            <div className={"flex gap-3"}>
+            <div className={"flex flex-wrap gap-3"}>
               {tags &&
                 tags.map((tag) => (
                   <img

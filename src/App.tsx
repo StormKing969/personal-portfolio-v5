@@ -2,6 +2,7 @@ import Navbar from "./sections/Navbar.tsx";
 import Hero from "./sections/Hero.tsx";
 import About from "./sections/About.tsx";
 import Projects from "./sections/Projects.tsx";
+import Experiences from "./sections/Experiences.tsx";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Hero />
       <About />
       <Projects />
+      <Experiences />
     </main>
   );
 };

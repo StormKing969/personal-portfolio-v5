@@ -24,7 +24,7 @@ const Project = ({
     <>
       <div
         className={
-          "flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0"
+          "flex-wrap items-center justify-between py-10 space-y-14 sm:flex md:space-y-0"
         }
         onMouseEnter={() => setPreview({ id: id, imageUrl: projectImage })}
         onMouseLeave={() => setPreview(null)}
@@ -43,7 +43,9 @@ const Project = ({
             <p className={"text-2xl"}>{title}</p>
           </div>
 
-          <div className={"flex gap-5 mt-2 text-sand"}>
+          <div
+            className={"flex flex-wrap sm:max-w-[550px] gap-5 mt-2 text-sand"}
+          >
             {tags && tags.map((tag) => <span key={tag.id}>{tag.name}</span>)}
           </div>
         </div>

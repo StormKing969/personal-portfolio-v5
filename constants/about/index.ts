@@ -32,19 +32,29 @@ export const Qualities: BehavioralQualityType[] = [
     imageUrl: null,
   },
   {
-    title: null,
-    cardStyle: { rotate: "-45deg", top: "5%", left: "10%" },
-    imageUrl: "assets/logos/vitejs.svg",
+    title: "Problem Solver",
+    cardStyle: { rotate: "30deg", top: "5%", left: "10%" },
+    imageUrl: null,
   },
   {
-    title: null,
+    title: "Team Player",
     cardStyle: { rotate: "-45deg", top: "70%", left: "25%" },
-    imageUrl: "assets/logos/react.svg",
+    imageUrl: null,
   },
   {
-    title: null,
-    cardStyle: { rotate: "30deg", top: "2%", left: "85%" },
-    imageUrl: "assets/logos/tailwindcss.svg",
+    title: "Adaptive",
+    cardStyle: { rotate: "30deg", top: "50%", left: "60%" },
+    imageUrl: null,
+  },
+  {
+    title: "Open-minded",
+    cardStyle: { rotate: "60deg", top: "2%", left: "55%" },
+    imageUrl: null,
+  },
+  {
+    title: "Passionate",
+    cardStyle: { rotate: "30deg", top: "2%", left: "75%" },
+    imageUrl: null,
   },
 ];
 

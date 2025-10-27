@@ -56,10 +56,13 @@ const ProjectDetails = ({
         <div className={"p-5"}>
           <h5 className={"mb-2 text-2xl font-bold text-white"}>{title}</h5>
           <p className={"mb-3 font-normal text-neutral-400"}>{description}</p>
-          <ul>
+          <ul className={"max-h-[200px] overflow-y-auto"}>
             {subDescription &&
               subDescription.map((desc: string, index: number) => (
-                <li key={index} className={"mb-3 ml-6 font-normal text-neutral-400 list-disc"}>
+                <li
+                  key={index}
+                  className={"mb-3 ml-6 font-normal text-neutral-400 list-disc"}
+                >
                   {desc}
                 </li>
               ))}
@@ -70,7 +73,7 @@ const ProjectDetails = ({
                 tags.map((tag) => (
                   <img
                     key={tag.id}
-                    src={tag.url}
+                    src={`assets/projects/logos/${tag.imageUrl}`}
                     alt={tag.name}
                     className={"rounded-lg size-10 hover-animation"}
                   />
@@ -78,19 +81,6 @@ const ProjectDetails = ({
             </div>
 
             <div className={"flex flex-col gap-1"}>
-              <a
-                href={repoLink}
-                className={
-                  "inline-flex items-center gap-1 font-medium cursor-pointer hover-animation"
-                }
-              >
-                View on GitHub{" "}
-                <img
-                  src={"assets/arrow-up.svg"}
-                  alt={"arrow-up"}
-                  className={"size-4"}
-                />
-              </a>
               {liveLink && (
                 <a
                   href={liveLink}
@@ -98,7 +88,7 @@ const ProjectDetails = ({
                     "inline-flex items-center gap-1 font-medium cursor-pointer hover-animation"
                   }
                 >
-                  View Live Site{" "}
+                  Live Site{" "}
                   <img
                     src={"assets/arrow-up.svg"}
                     alt={"arrow-up"}
@@ -106,6 +96,19 @@ const ProjectDetails = ({
                   />
                 </a>
               )}
+              <a
+                href={repoLink}
+                className={
+                  "inline-flex items-center gap-1 font-medium cursor-pointer hover-animation"
+                }
+              >
+                GitHub Repo{" "}
+                <img
+                  src={"assets/arrow-up.svg"}
+                  alt={"arrow-up"}
+                  className={"size-4"}
+                />
+              </a>
             </div>
           </div>
         </div>

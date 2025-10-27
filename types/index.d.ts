@@ -26,7 +26,7 @@ export interface ProjectType {
 interface ProjectTag {
   id: number;
   name: string;
-  url: string;
+  imageUrl: string;
 }
 
 export interface SocialType {

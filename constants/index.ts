@@ -21,7 +21,7 @@ export const NavLinks: NavigationLinkType[] = [
 
 export const FlipHeroTextWords: string[] = [
   "Secure",
-  "Contemporary",
+  "Responsive",
   "Scalable",
 ];
 

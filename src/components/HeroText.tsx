@@ -72,7 +72,7 @@ const HeroText = () => {
         </motion.p>
         <div>
           <motion.p
-            className={"text-5xl font-black text-neutral-300"}
+            className={"text-4xl font-black text-neutral-300"}
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -88,12 +88,12 @@ const HeroText = () => {
           >
             <FlipWords
               words={FlipHeroTextWords}
-              className={"font-bold text-white text-7xl"}
+              className={"font-bold text-white text-5xl"}
             />
           </motion.div>
 
           <motion.p
-            className={"text-4xl font-black text-neutral-300"}
+            className={"text-3xl font-black text-neutral-300"}
             variants={variants}
             initial="hidden"
             animate="visible"

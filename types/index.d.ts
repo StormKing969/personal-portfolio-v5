@@ -1,14 +1,6 @@
-import type { CSSProperties } from "react";
-
 export interface NavigationLinkType {
   title: string;
   link: string;
-}
-
-export interface BehavioralQualityType {
-  title: string | null;
-  cardStyle: CSSProperties;
-  imageUrl: string | null;
 }
 
 export interface ProjectType {
@@ -56,7 +48,7 @@ export interface PreviewType {
 }
 
 export interface FormDataType {
-    name: string;
-    email: string;
-    message: string;
+  name: string;
+  email: string;
+  message: string;
 }

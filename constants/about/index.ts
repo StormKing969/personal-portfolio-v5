@@ -1,61 +1,36 @@
-import type { BehavioralQualityType } from "../../types";
-
 export const Card1Title: string = "Hi, I'm Sajana Wijesinghe";
 
 export const Card1Context: string =
   "Over the past four years I have advanced both frontend and backend capabilities to deliver robust, production-grade web applications.";
 
-export const Qualities: BehavioralQualityType[] = [
-  {
-    title: "Results-driven",
-    cardStyle: { rotate: "75deg", top: "30%", left: "20%" },
-    imageUrl: null,
-  },
-  {
-    title: "Initiative-taker",
-    cardStyle: { rotate: "-30deg", top: "60%", left: "45%" },
-    imageUrl: null,
-  },
-  {
-    title: "Fast learner",
-    cardStyle: { rotate: "90deg", bottom: "30%", left: "65%" },
-    imageUrl: null,
-  },
-  {
-    title: "Clear communicator",
-    cardStyle: { rotate: "-45deg", top: "40%", left: "0%" },
-    imageUrl: null,
-  },
-  {
-    title: "Globally curious",
-    cardStyle: { rotate: "20deg", top: "10%", left: "38%" },
-    imageUrl: null,
-  },
-  {
-    title: "Problem Solver",
-    cardStyle: { rotate: "30deg", top: "5%", left: "10%" },
-    imageUrl: null,
-  },
-  {
-    title: "Team Player",
-    cardStyle: { rotate: "-45deg", top: "70%", left: "25%" },
-    imageUrl: null,
-  },
-  {
-    title: "Adaptive",
-    cardStyle: { rotate: "30deg", top: "50%", left: "60%" },
-    imageUrl: null,
-  },
-  {
-    title: "Open-minded",
-    cardStyle: { rotate: "60deg", top: "2%", left: "55%" },
-    imageUrl: null,
-  },
-  {
-    title: "Passionate",
-    cardStyle: { rotate: "30deg", top: "2%", left: "75%" },
-    imageUrl: null,
-  },
+export const BehavioralQualities: string[] = [
+  "Active Listener",
+  "Ethical AI User",
+  "Clear Communicator",
+  "Empathetic Collaborator",
+  "Diplomatic Negotiator",
+  "Automation-Minded Innovator",
+  "Constructive Feedback Giver",
+  "Self-Motivated",
+  "Accountable",
+  "Resilient Under Pressure",
+  "Detail-Oriented",
+  "Human-AI Collaborator",
+  "Results-Driven",
+  "Creative Thinker",
+  "Resourceful",
+  "Adaptable",
+  "Data-Informed Decision Maker",
+  "Curious Learner",
+  "Analytical Decision-Maker",
+  "Supportive Teammate",
+  "Inclusive Mindset",
+  "AI-Adaptable Learner",
+  "Mentorship-Oriented",
+  "Vision-Oriented Leader",
+  "Conflict Resolver",
+  "Positive Attitude",
+  "AI-Curious Explorer",
 ];
 
 export const Card3Title: string = "Location";

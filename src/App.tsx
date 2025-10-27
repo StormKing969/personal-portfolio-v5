@@ -4,6 +4,7 @@ import About from "./sections/About.tsx";
 import Projects from "./sections/Projects.tsx";
 import Experiences from "./sections/Experiences.tsx";
 import Testimonial from "./sections/Testimonial.tsx";
+import Contact from "./sections/Contact.tsx";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Projects />
       <Experiences />
       <Testimonial />
+      <Contact />
     </main>
   );
 };

@@ -17,11 +17,11 @@ const ReviewCard = ({
       <div className="flex flex-row items-center gap-2">
         {imgUrl && (
           <img
-            className="rounded-full bg-white/10"
+            className="rounded-full bg-white/10 object-cover"
             width="32"
             height="32"
-            alt=""
-            src={imgUrl}
+            alt={username}
+            src={`${import.meta.env.BASE_URL}assets/reviews/${imgUrl}`}
           />
         )}
         <div className="flex flex-col">

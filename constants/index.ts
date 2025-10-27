@@ -47,7 +47,7 @@ export const Reviews: ReviewType[] = [
       "Sajana has been essential part of VOM and a great teammate to have, always willing to land a helping hand. " +
       "Recently we got assigned Spring Boot/Java upgrade to work on together, and while there is still ways to go " +
       "before we call it done, a lot of the progress we've made is due to Sajana's 'Innovate Now' mindset and work etiquette.",
-    imgUrl: null,
+    imgUrl: "daniel-kolov.jpg",
   },
   {
     name: "Pam Neill",
@@ -58,7 +58,7 @@ export const Reviews: ReviewType[] = [
       "backend changes, batch changes, production support changes and helped with production support. Great job emerging as " +
       "a subject matter expert for the Kafka communication protocol showing 'Look Ahead', 'It's On Me' and 'One Team'. " +
       "Well Done!",
-    imgUrl: null,
+    imgUrl: "pam-neill.jpg",
   },
   {
     name: "Sudhir Gupta",
@@ -68,7 +68,7 @@ export const Reviews: ReviewType[] = [
       "Thank you, Sajana, for demonstrating innovative behavior as you structured configuration in VOM2.0 codebase and made " +
       "it more relevant and simplified. As we continue to add more functionality, these elements are going to be crucial for " +
       "future maintainability and sustainability of 2.0 codebase. Thank you for your diligence and innovative thinking! Great job!",
-    imgUrl: null,
+    imgUrl: "john.png",
   },
   {
     name: "Huan Wu",
@@ -78,7 +78,7 @@ export const Reviews: ReviewType[] = [
       "I just wanted to take a moment to thank you for your support in resolving the database connection and toke issues " +
       "when I started to work on VOM2.0. I really appreciate the time and effort you put into helping me get everything up " +
       "and running smoothly.",
-    imgUrl: null,
+    imgUrl: "huan-wu.jpg",
   },
 ];
 

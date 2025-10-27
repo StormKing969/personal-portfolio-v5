@@ -65,7 +65,11 @@ const Navbar = () => {
                 index: number,
               ) => (
                 <li key={index} className={"nav-li"}>
-                  <a className={"nav-link"} href={link}>
+                  <a
+                    className={"nav-link"}
+                    href={link}
+                    onClick={() => setIsOpen(false)}
+                  >
                     {title}
                   </a>
                 </li>

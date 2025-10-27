@@ -44,9 +44,9 @@ export const Timeline = ({ data }: { data: ExperienceType[] }) => {
                   "flex-col hidden gap-2 text-xl font-bold md:flex md:pl-20 md:text-3xl text-neutral-300"
                 }
               >
-                <h3>{item.duration}</h3>
-                <h3 className={"text-3xl text-neutral-400"}>{item.title}</h3>
-                <h3 className={"text-3xl text-neutral-500"}>{item.company}</h3>
+                <h3 className={"text-xl text-neutral-400"}>{item.duration}</h3>
+                <h3 className={"text-3xl"}>{item.title}</h3>
+                <h3 className={"text-2xl text-neutral-500"}>{item.company}</h3>
               </div>
             </div>
 
@@ -56,9 +56,9 @@ export const Timeline = ({ data }: { data: ExperienceType[] }) => {
                   "block mb-4 text-2xl font-bold text-left text-neutral-300 md:hidden"
                 }
               >
-                <h3>{item.duration}</h3>
-                <h3>{item.title}</h3>
-                <h3>{item.company}</h3>
+                <h3 className={"text-lg text-neutral-400"}>{item.duration}</h3>
+                <h3 className={"text-2xl"}>{item.title}</h3>
+                <h3 className={"text-xl text-neutral-500"}>{item.company}</h3>
               </div>
               {item.description.map((item, index) => (
                 <p key={index} className={"mb-3 font-normal text-neutral-400"}>

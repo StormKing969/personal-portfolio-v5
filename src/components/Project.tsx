@@ -1,6 +1,6 @@
-import type { ProjectType } from "../../types";
+import type { PreviewType, ProjectType } from "../../types";
 import ProjectDetails from "./ProjectDetails";
-import { useState } from "react";
+import { type Dispatch, type SetStateAction, useState } from "react";
 
 const Project = ({
   project: {
@@ -14,8 +14,10 @@ const Project = ({
     projectImage,
     tags,
   },
+  setPreview,
 }: {
   project: ProjectType;
+  setPreview: Dispatch<SetStateAction<PreviewType | null>>;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -23,6 +25,8 @@ const Project = ({
       className={
         "flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0"
       }
+      onMouseEnter={() => setPreview({ id: id, imageUrl: projectImage })}
+      onMouseLeave={() => setPreview(null)}
     >
       <div>
         <div className={"inline-flex items-center gap-1"}>

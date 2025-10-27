@@ -50,3 +50,8 @@ export interface ReviewType {
   content: string;
   imgUrl: string | null;
 }
+
+export interface PreviewType {
+  id: number;
+  imageUrl: string | null;
+}

@@ -56,7 +56,7 @@ const ProjectDetails = ({
         <div className={"p-5"}>
           <h5 className={"mb-2 text-2xl font-bold text-white"}>{title}</h5>
           <p className={"mb-3 font-normal text-neutral-400"}>{description}</p>
-          <ul className={"max-h-[200px] overflow-y-auto"}>
+          <ul className={"max-h-[200px] overflow-y-auto pr-[2px]"}>
             {subDescription &&
               subDescription.map((desc: string, index: number) => (
                 <li

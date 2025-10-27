@@ -3,6 +3,7 @@ import Hero from "./sections/Hero.tsx";
 import About from "./sections/About.tsx";
 import Projects from "./sections/Projects.tsx";
 import Experiences from "./sections/Experiences.tsx";
+import Testimonial from "./sections/Testimonial.tsx";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <About />
       <Projects />
       <Experiences />
+      <Testimonial />
     </main>
   );
 };

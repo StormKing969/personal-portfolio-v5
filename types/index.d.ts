@@ -45,7 +45,6 @@ export interface ExperienceType {
 export interface ReviewType {
   name: string;
   username: string;
-  jobTitle: string;
   userProfileLink: string;
   content: string;
   imgUrl: string | null;

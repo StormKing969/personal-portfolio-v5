@@ -3,9 +3,9 @@ import {ProfessionalExperiences} from "../../constants/experiences";
 
 const Experiences = () => {
     return (
-        <div id={"work"} className={"w-full"}>
+        <section id={"work"} className={"w-full"}>
             <Timeline data={ProfessionalExperiences} />
-        </div>
+        </section>
     )
 }
 

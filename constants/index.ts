@@ -42,7 +42,6 @@ export const Reviews: ReviewType[] = [
   {
     name: "Daniel Kolov",
     username: "@daniel-kolov",
-    jobTitle: "Software Engineer",
     userProfileLink: "linkedin.com/in/daniel-kolov-110599160",
     content:
       "Sajana has been essential part of VOM and a great teammate to have, always willing to land a helping hand. " +
@@ -53,8 +52,6 @@ export const Reviews: ReviewType[] = [
   {
     name: "Pam Neill",
     username: "@pam-neill",
-    jobTitle:
-      "Leading Vehicle Order Management for Global Sales, Marketing and Customer Experience",
     userProfileLink: "linkedin.com/in/pam-neill-07b6a02",
     content:
       "Great job, Saj, integrating quickly into the VOM team and moving forward. Appreciate that you have made UI changes, " +
@@ -66,7 +63,6 @@ export const Reviews: ReviewType[] = [
   {
     name: "Sudhir Gupta",
     username: "@sudhir-gupta",
-    jobTitle: "Principal Engineer",
     userProfileLink: "linkedin.com/in/sudhir-gupta-029190",
     content:
       "Thank you, Sajana, for demonstrating innovative behavior as you structured configuration in VOM2.0 codebase and made " +
@@ -77,7 +73,6 @@ export const Reviews: ReviewType[] = [
   {
     name: "Huan Wu",
     username: "@huan-wu",
-    jobTitle: "Software Developer",
     userProfileLink: "linkedin.com/in/huanwu2020",
     content:
       "I just wanted to take a moment to thank you for your support in resolving the database connection and toke issues " +
@@ -86,3 +81,5 @@ export const Reviews: ReviewType[] = [
     imgUrl: null,
   },
 ];
+
+export const ReviewSectionHeader: string = "What They Say About Me!";

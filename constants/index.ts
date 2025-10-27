@@ -19,11 +19,7 @@ export const NavLinks: NavigationLinkType[] = [
   },
 ];
 
-export const FlipHeroTextWords: string[] = [
-  "Secure",
-  "Responsive",
-  "Scalable",
-];
+export const FlipHeroTextWords: string[] = ["Secure", "Responsive", "Scalable"];
 
 export const SocialLinks: SocialType[] = [
   {
@@ -35,6 +31,11 @@ export const SocialLinks: SocialType[] = [
     name: "Instagram",
     href: "https://www.instagram.com/wijesinghesaj/",
     iconUrl: "assets/socials/instagram.svg",
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/StormKing969",
+    iconUrl: "assets/socials/github.png",
   },
 ];
 
@@ -82,4 +83,10 @@ export const Reviews: ReviewType[] = [
   },
 ];
 
-export const ReviewSectionHeader: string = "What They Say About Me!";
+export const ReviewSectionHeader: string = "Here’s What People Are Saying";
+
+export const ContactSectionHeader: string =
+  "Feel free to reach out—I’d be glad to connect.";
+
+export const ContactSectionContext: string =
+  "From launching a brand-new website to enhancing your current platform or developing a one-of-a-kind project, I’m ready to support your vision.";

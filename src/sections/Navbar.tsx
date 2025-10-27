@@ -17,7 +17,7 @@ const Navbar = () => {
               "text-xl font-bold transition-colors text-neutral-400 hover:text-white"
             }
           >
-            Sajana
+            Sajana Wijesinghe
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}

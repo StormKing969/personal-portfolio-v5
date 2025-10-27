@@ -54,3 +54,9 @@ export interface PreviewType {
   id: number;
   imageUrl: string | null;
 }
+
+export interface FormDataType {
+    name: string;
+    email: string;
+    message: string;
+}

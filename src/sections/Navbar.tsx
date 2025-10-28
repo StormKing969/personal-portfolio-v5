@@ -14,10 +14,10 @@ const Navbar = () => {
           <a
             href={"/"}
             className={
-              "text-xl font-bold transition-colors text-neutral-400 hover:text-white"
+              "italic text-xl font-bold transition-colors text-neutral-400 hover:text-white"
             }
           >
-            Sajana Wijesinghe
+            Sajana W
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}

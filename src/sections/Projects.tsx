@@ -33,7 +33,7 @@ const Projects = () => {
       {preview && (
         <motion.img
           className={
-            "fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-80"
+            "hidden sm:block fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-80"
           }
           style={{ x: springX, y: springY }}
           src={`/assets/projects/project-${preview?.id}/${preview?.imageUrl}`}

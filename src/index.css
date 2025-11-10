@@ -16,6 +16,7 @@
   --color-sand: #d6995c;
   --color-coral: #ea4884;
   --animate-orbit: orbit 50s linear infinite;
+
   @keyframes orbit {
     0% {
       transform: rotate(calc(var(--angle) * 1deg))
@@ -45,6 +46,15 @@
     }
     to {
       transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+
+  @keyframes spinSlow {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
     }
   }
 }
@@ -143,4 +153,9 @@ body {
 
 .field-input-focus {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
+}
+
+/* My Approach Section*/
+.animate-spin-slow {
+  animation: spinSlow 5s linear infinite;
 }

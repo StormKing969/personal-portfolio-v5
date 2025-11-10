@@ -42,6 +42,13 @@ export interface ReviewType {
   imgUrl: string | null;
 }
 
+export interface ApproachType {
+    phase: string;
+    title: string;
+    content: string;
+    bgColor: string;
+}
+
 export interface PreviewType {
   id: number;
   imageUrl: string | null;

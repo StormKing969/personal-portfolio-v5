@@ -1,4 +1,9 @@
-import type { NavigationLinkType, ReviewType, SocialType } from "../types";
+import type {
+  ApproachType,
+  NavigationLinkType,
+  ReviewType,
+  SocialType,
+} from "../types";
 
 export const NavLinks: NavigationLinkType[] = [
   {
@@ -80,6 +85,32 @@ export const Reviews: ReviewType[] = [
       "when I started to work on VOM2.0. I really appreciate the time and effort you put into helping me get everything up " +
       "and running smoothly.",
     imgUrl: "huan-wu.jpg",
+  },
+];
+
+export const MyApproachHeader: string = "My Approach";
+
+export const MyApproachContent: ApproachType[] = [
+  {
+    phase: "1",
+    title: "Planning & Strategy",
+    content:
+      "We clarify goals, requirements, and success metrics. I deliver a scoped roadmap with milestones and a clear estimate.",
+    bgColor: "bg-green-500",
+  },
+  {
+    phase: "2",
+    title: "Development & Progress Updates",
+    content:
+      "I build features in short iterations and run tests for quality. You receive concise progress summaries and review demos each sprint.",
+    bgColor: "bg-red-500",
+  },
+  {
+    phase: "3",
+    title: "Deployment & Launch",
+    content:
+      "I perform final QA, deploy to production, and verify functionality. You get handover docs and a short support window after launch.",
+    bgColor: "bg-blue-500",
   },
 ];
 

@@ -6,6 +6,7 @@ import Experiences from "./sections/Experiences.tsx";
 import Testimonial from "./sections/Testimonial.tsx";
 import Contact from "./sections/Contact.tsx";
 import Footer from "./sections/Footer.tsx";
+import MyApproach from "./sections/MyApproach.tsx";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Projects />
       <Experiences />
       <Testimonial />
+      <MyApproach />
       <Contact />
       <Footer />
     </main>

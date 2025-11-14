@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLinks } from "../../constants";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -50,34 +50,36 @@ const Navbar = () => {
         </div>
       </div>
 
-      {isOpen && (
-        <motion.div
-          className={"block overflow-hidden text-center sm:hidden"}
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          style={{ maxHeight: "100vh" }}
-          transition={{ duration: 1 }}
-        >
-          <nav className={"pb-5"}>
-            {NavLinks.map(
-              (
-                { title, link }: { title: string; link: string },
-                index: number,
-              ) => (
-                <li key={index} className={"nav-li"}>
-                  <a
-                    className={"nav-link"}
-                    href={link}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {title}
-                  </a>
-                </li>
-              ),
-            )}
-          </nav>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className={"block overflow-hidden text-center sm:hidden"}
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            style={{ maxHeight: "100vh" }}
+            transition={{ duration: 1 }}
+          >
+            <nav className={"pb-5"}>
+              {NavLinks.map(
+                (
+                  { title, link }: { title: string; link: string },
+                  index: number,
+                ) => (
+                  <li key={index} className={"nav-li"}>
+                    <a
+                      className={"nav-link"}
+                      href={link}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {title}
+                    </a>
+                  </li>
+                ),
+              )}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

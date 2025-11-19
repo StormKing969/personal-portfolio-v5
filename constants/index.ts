@@ -22,6 +22,10 @@ export const NavLinks: NavigationLinkType[] = [
     title: "Contact",
     link: "#contact",
   },
+  {
+    title: "Gallery",
+    link: "/gallery",
+  },
 ];
 
 export const FlipHeroTextWords: string[] = ["Secure", "Responsive", "Scalable"];

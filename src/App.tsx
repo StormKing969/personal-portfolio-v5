@@ -1,26 +1,13 @@
-import Navbar from "./sections/Navbar.tsx";
-import Hero from "./sections/Hero.tsx";
-import About from "./sections/About.tsx";
-import Projects from "./sections/Projects.tsx";
-import Experiences from "./sections/Experiences.tsx";
-import Testimonial from "./sections/Testimonial.tsx";
-import Contact from "./sections/Contact.tsx";
-import Footer from "./sections/Footer.tsx";
-import MyApproach from "./sections/MyApproach.tsx";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home.tsx";
+import Gallery from "./pages/Gallery.tsx";
 
 const App = () => {
   return (
-    <main className={"container mx-auto max-w-7xl"}>
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Experiences />
-      <Testimonial />
-      <MyApproach />
-      <Contact />
-      <Footer />
-    </main>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/gallery" element={<Gallery />} />
+    </Routes>
   );
 };
 

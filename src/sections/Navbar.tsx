@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLinks } from "../../constants";
 import { AnimatePresence, motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -39,9 +40,9 @@ const Navbar = () => {
                   index: number,
                 ) => (
                   <li key={index} className={"nav-li"}>
-                    <a className={"nav-link"} href={link}>
+                    <Link className={"nav-link"} to={link}>
                       {title}
-                    </a>
+                    </Link>
                   </li>
                 ),
               )}

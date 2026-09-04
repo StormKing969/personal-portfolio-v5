@@ -1,5 +1,6 @@
 import { SocialLinks } from "../../constants";
 import type { SocialType } from "../../types";
+import { assetUrl } from "../utils/asset.ts";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
     >
       <div
         className={
-          "mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-px w-full"
+          "mb-4 bg-linear-to-r from-transparent via-neutral-700 to-transparent h-px w-full"
         }
       />
 
@@ -24,7 +25,7 @@ const Footer = () => {
         {SocialLinks.map(
           ({ href, iconUrl, name }: SocialType, index: number) => (
             <a href={href} key={index}>
-              <img src={iconUrl} alt={name} className={"w-5 h-5"} />
+              <img src={assetUrl(iconUrl)} alt={name} className={"w-5 h-5"} />
             </a>
           ),
         )}

@@ -1,4 +1,5 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import { assetUrl } from "../utils/asset.ts";
 
 const ParallaxBackground = () => {
   const { scrollYProgress } = useScroll();
@@ -15,7 +16,7 @@ const ParallaxBackground = () => {
         <div
           className={"absolute inset-0 w-full h-screen -z-50"}
           style={{
-            backgroundImage: "url(assets/sky.jpg)",
+            backgroundImage: `url(${assetUrl("sky.jpg")})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
@@ -26,7 +27,7 @@ const ParallaxBackground = () => {
         <motion.div
           className={"absolute inset-0 w-full h-screen -z-40"}
           style={{
-            backgroundImage: "url(assets/mountain-3.png)",
+            backgroundImage: `url(${assetUrl("mountain-3.png")})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
@@ -38,7 +39,7 @@ const ParallaxBackground = () => {
         <motion.div
           className={"absolute inset-0 w-full h-screen -z-30"}
           style={{
-            backgroundImage: "url(assets/planets.png)",
+            backgroundImage: `url(${assetUrl("planets.png")})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
@@ -50,7 +51,7 @@ const ParallaxBackground = () => {
         <motion.div
           className={"absolute inset-0 w-full h-screen -z-20"}
           style={{
-            backgroundImage: "url(assets/mountain-2.png)",
+            backgroundImage: `url(${assetUrl("mountain-2.png")})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
@@ -62,7 +63,7 @@ const ParallaxBackground = () => {
         <motion.div
           className={"absolute inset-0 w-full h-screen -z-10"}
           style={{
-            backgroundImage: "url(assets/mountain-1.png)",
+            backgroundImage: `url(${assetUrl("mountain-1.png")})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "bottom",
             backgroundSize: "cover",

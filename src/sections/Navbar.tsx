@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLinks } from "../../constants";
 import { AnimatePresence, motion } from "motion/react";
+import { assetUrl } from "../utils/asset.ts";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -26,7 +27,7 @@ const Navbar = () => {
             }
           >
             <img
-              src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
+              src={assetUrl(isOpen ? "close.svg" : "menu.svg")}
               alt={"toggle menu"}
               className={"w-6 h-6"}
             />

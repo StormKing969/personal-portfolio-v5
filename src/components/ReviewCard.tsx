@@ -1,5 +1,6 @@
 import type { ReviewType } from "../../types";
 import { twMerge } from "tailwind-merge";
+import { assetUrl } from "../utils/asset.ts";
 
 const ReviewCard = ({
   name,
@@ -21,7 +22,7 @@ const ReviewCard = ({
             width="32"
             height="32"
             alt={username}
-            src={`${import.meta.env.BASE_URL}assets/reviews/${imgUrl}`}
+            src={assetUrl(`reviews/${imgUrl}`)}
           />
         )}
         <div className="flex flex-col">

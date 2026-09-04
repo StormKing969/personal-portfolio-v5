@@ -1,5 +1,6 @@
 import type { PreviewType, ProjectType } from "../../types";
 import ProjectDetails from "./ProjectDetails";
+import { assetUrl, projectAsset } from "../utils/asset.ts";
 import { type Dispatch, type SetStateAction, useState } from "react";
 
 const Project = ({
@@ -34,7 +35,7 @@ const Project = ({
             {projectLogo && (
               <span>
                 <img
-                  src={`/assets/projects/project-${id}/${projectLogo}`}
+                  src={projectAsset(id, projectLogo)}
                   alt={title}
                   className={"max-h-6"}
                 />{" "}
@@ -55,7 +56,7 @@ const Project = ({
         >
           Read More
           <img
-            src={"/assets/arrow-right.svg"}
+            src={assetUrl("arrow-right.svg")}
             className={"w-5"}
             alt={"arrow-right"}
           />

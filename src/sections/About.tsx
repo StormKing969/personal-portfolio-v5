@@ -13,6 +13,7 @@ import {
 } from "../../constants/about";
 import { WordRotate } from "../components/WordRotate.tsx";
 import { FlickeringGrid } from "../components/FlickeringGrid.tsx";
+import { assetUrl } from "../utils/asset.ts";
 
 const About = () => {
   return (
@@ -26,10 +27,10 @@ const About = () => {
         {/*  Grid 1  */}
         <div className={"flex items-end grid-default-color grid-1"}>
           <img
-            src={"assets/coding-pov.png"}
+            src={assetUrl("coding-pov.png")}
             alt={"coding pov"}
             className={
-              "absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
+              "absolute scale-[1.75] -right-20 -top-4 md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
             }
           />
           <div className={"z-10"}>
@@ -39,7 +40,7 @@ const About = () => {
 
           <div
             className={
-              "absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo"
+              "absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-linear-to-t from-indigo"
             }
           />
         </div>

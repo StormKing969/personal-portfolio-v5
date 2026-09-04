@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import type { PreviewType, ProjectType } from "../../types";
+import { assetUrl, projectAsset } from "../utils/asset.ts";
 import type { Dispatch, SetStateAction } from "react";
 
 type ProjectDetailsProps = ProjectType & {
@@ -44,10 +45,10 @@ const ProjectDetails = ({
             "absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500"
           }
         >
-          <img src={"assets/close.svg"} alt="close" className={"w-6 h-6"} />
+          <img src={assetUrl("close.svg")} alt="close" className={"w-6 h-6"} />
         </button>
         <img
-          src={`/assets/projects/project-${id}/${projectImage}`}
+          src={projectAsset(id, projectImage)}
           alt={title}
           className={
             "w-full h-full max-w-[1920px] max-h-[1080px] object-cover rounded-t-2xl"
@@ -73,7 +74,7 @@ const ProjectDetails = ({
                 tags.map((tag) => (
                   <img
                     key={tag.id}
-                    src={`assets/projects/logos/${tag.imageUrl}`}
+                    src={assetUrl(`projects/logos/${tag.imageUrl}`)}
                     alt={tag.name}
                     className={"rounded-lg size-10 hover-animation"}
                   />
@@ -90,7 +91,7 @@ const ProjectDetails = ({
                 >
                   Live Site{" "}
                   <img
-                    src={"assets/arrow-up.svg"}
+                    src={assetUrl("arrow-up.svg")}
                     alt={"arrow-up"}
                     className={"size-4"}
                   />
@@ -104,7 +105,7 @@ const ProjectDetails = ({
               >
                 GitHub Repo{" "}
                 <img
-                  src={"assets/arrow-up.svg"}
+                  src={assetUrl("arrow-up.svg")}
                   alt={"arrow-up"}
                   className={"size-4"}
                 />

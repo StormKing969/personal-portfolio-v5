@@ -30,17 +30,17 @@ export const SocialLinks: SocialType[] = [
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/sajana-wijesinghe/",
-    iconUrl: "assets/socials/linkedIn.svg",
+    iconUrl: "socials/linkedIn.svg",
   },
   {
     name: "Instagram",
     href: "https://www.instagram.com/wijesinghesaj/",
-    iconUrl: "assets/socials/instagram.svg",
+    iconUrl: "socials/instagram.svg",
   },
   {
     name: "GitHub",
     href: "https://github.com/StormKing969",
-    iconUrl: "assets/socials/github.png",
+    iconUrl: "socials/github.png",
   },
 ];
 

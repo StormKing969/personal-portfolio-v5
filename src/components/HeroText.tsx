@@ -1,13 +1,9 @@
 import { FlipWords } from "./FlipWords.tsx";
 import { FlipHeroTextWords } from "../../constants";
 import { motion } from "motion/react";
+import { heroEntrance } from "../utils/heroEntrance.ts";
 
 const HeroText = () => {
-  const variants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  };
-
   return (
     <div
       className={
@@ -16,31 +12,17 @@ const HeroText = () => {
     >
       {/*  Desktop View  */}
       <div className={"flex-col hidden md:flex c-space"}>
-        <motion.h1
-          className={"text-4xl font-medium"}
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1 }}
-        >
+        <motion.h1 className={"text-4xl font-medium"} {...heroEntrance(1)}>
           Hi, I'm Sajana!
         </motion.h1>
         <div className={"flex flex-col items-start"}>
           <motion.p
             className={"text-5xl font-medium text-neutral-300"}
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.2 }}
+            {...heroEntrance(1.2)}
           >
             A Developer <br /> Dedicated to Crafting
           </motion.p>
-          <motion.div
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.5 }}
-          >
+          <motion.div {...heroEntrance(1.5)}>
             <FlipWords
               words={FlipHeroTextWords}
               className={"font-black text-white text-8xl"}
@@ -49,10 +31,7 @@ const HeroText = () => {
 
           <motion.p
             className={"text-4xl font-medium text-neutral-300"}
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.8 }}
+            {...heroEntrance(1.8)}
           >
             AI Enabled Web Solutions
           </motion.p>
@@ -61,31 +40,17 @@ const HeroText = () => {
 
       {/*  Mobile View  */}
       <div className={"flex flex-col space-y-6 md:hidden"}>
-        <motion.p
-          className={"text-4xl font-medium"}
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1 }}
-        >
+        <motion.p className={"text-4xl font-medium"} {...heroEntrance(1)}>
           Hi, I'm Sajana!
         </motion.p>
         <div>
           <motion.p
             className={"text-4xl font-black text-neutral-300"}
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.2 }}
+            {...heroEntrance(1.2)}
           >
             Building
           </motion.p>
-          <motion.div
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.5 }}
-          >
+          <motion.div {...heroEntrance(1.5)}>
             <FlipWords
               words={FlipHeroTextWords}
               className={"font-bold text-white text-5xl"}
@@ -94,10 +59,7 @@ const HeroText = () => {
 
           <motion.p
             className={"text-3xl font-black text-neutral-300"}
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.8 }}
+            {...heroEntrance(1.8)}
           >
             Web Applications
           </motion.p>

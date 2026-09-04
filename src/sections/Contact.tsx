@@ -1,13 +1,9 @@
 import { ContactSectionContext, ContactSectionHeader } from "../../constants";
 import React, { useState } from "react";
 import type { FormDataType } from "../../types";
-import emailjs from "@emailjs/browser";
+import { sendContactMessage } from "../utils/contact.ts";
 import Alert from "../components/Alert.tsx";
 import { Particles } from "../components/Particles.tsx";
-
-const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
 const Contact = () => {
   const [isSending, setIsSending] = useState<boolean>(false);
@@ -41,28 +37,12 @@ const Contact = () => {
     e.preventDefault();
     setIsSending(true);
 
-    try {
-      await emailjs
-        .send(
-          serviceId,
-          templateId,
-          {
-            from_name: formData.name,
-            to_name: "Sajana",
-            from_email: formData.email,
-            to_email: "svwijesinghe97@gmail.com",
-            message: formData.message,
-          },
-          { publicKey: publicKey },
-        )
-        .then(() => {
-          showAlertModal("success", "Message sent successfully");
-        })
-        .finally(() => {
-          setFormData({ email: "", message: "", name: "" });
-        });
-    } catch (error) {
-      showAlertModal("danger", "Something went wrong while sending email");
+    const result = await sendContactMessage(formData);
+    if (result.ok) {
+      showAlertModal("success", "Message sent successfully");
+      setFormData({ email: "", message: "", name: "" });
+    } else {
+      showAlertModal("danger", result.error);
     }
   };
 

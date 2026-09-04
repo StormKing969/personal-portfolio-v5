@@ -4,22 +4,13 @@ import { assetUrl, projectAsset } from "../utils/asset.ts";
 import { type Dispatch, type SetStateAction, useState } from "react";
 
 const Project = ({
-  project: {
-    id,
-    title,
-    description,
-    subDescription,
-    repoLink,
-    liveLink,
-    projectLogo,
-    projectImage,
-    tags,
-  },
+  project,
   setPreview,
 }: {
   project: ProjectType;
   setPreview: Dispatch<SetStateAction<PreviewType | null>>;
 }) => {
+  const { id, title, projectLogo, projectImage, tags } = project;
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -51,7 +42,10 @@ const Project = ({
           </div>
         </div>
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => {
+            setIsOpen(true);
+            setPreview(null);
+          }}
           className={"flex items-center gap-1 cursor-pointer hover-animation"}
         >
           Read More
@@ -64,18 +58,8 @@ const Project = ({
 
         {isOpen && (
           <ProjectDetails
-            id={id}
-            title={title}
-            description={description}
-            subDescription={subDescription}
-            repoLink={repoLink}
-            liveLink={liveLink}
-            projectLogo={projectLogo}
-            projectImage={projectImage}
-            tags={tags}
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-            setPreview={setPreview}
+            project={project}
+            onClose={() => setIsOpen(false)}
           />
         )}
       </div>

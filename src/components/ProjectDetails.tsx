@@ -1,28 +1,24 @@
 import { motion } from "motion/react";
-import type { PreviewType, ProjectType } from "../../types";
+import type { ProjectType } from "../../types";
 import { assetUrl, projectAsset } from "../utils/asset.ts";
-import type { Dispatch, SetStateAction } from "react";
-
-type ProjectDetailsProps = ProjectType & {
-  isOpen: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
-  setPreview: Dispatch<SetStateAction<PreviewType | null>>;
-};
 
 const ProjectDetails = ({
-  id,
-  title,
-  description,
-  subDescription,
-  repoLink,
-  liveLink,
-  projectImage,
-  tags,
-  isOpen,
-  setIsOpen,
-  setPreview,
-}: ProjectDetailsProps) => {
-  setPreview(null);
+  project,
+  onClose,
+}: {
+  project: ProjectType;
+  onClose: () => void;
+}) => {
+  const {
+    id,
+    title,
+    description,
+    subDescription,
+    repoLink,
+    liveLink,
+    projectImage,
+    tags,
+  } = project;
 
   return (
     <div
@@ -38,9 +34,7 @@ const ProjectDetails = ({
         animate={{ opacity: 1, scale: 1 }}
       >
         <button
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
+          onClick={onClose}
           className={
             "absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500"
           }

@@ -21,7 +21,10 @@ describe("sendContactMessage", () => {
   });
 
   it("returns ok when the send succeeds", async () => {
-    vi.mocked(emailjs.send).mockResolvedValue({ status: 200, text: "OK" } as never);
+    vi.mocked(emailjs.send).mockResolvedValue({
+      status: 200,
+      text: "OK",
+    } as never);
     expect(await sendContactMessage(form)).toEqual({ ok: true });
   });
 

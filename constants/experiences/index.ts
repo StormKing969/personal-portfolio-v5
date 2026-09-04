@@ -1,4 +1,4 @@
-import type {ExperienceType} from "../../types";
+import type { ExperienceType } from "../../types";
 
 export const ExperienceTitle: string = "My Work Experience";
 

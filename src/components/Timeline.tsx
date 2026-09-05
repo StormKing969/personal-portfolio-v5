@@ -5,6 +5,17 @@ import { useEffect, useRef, useState } from "react";
 import { ExperienceTitle } from "../../constants/experiences";
 import type { ExperienceType } from "../../types";
 
+// Single definition of the duration/title/company meta, rendered at both the
+// desktop sticky-sidebar site and the mobile inline site. Responsive h3 sizes
+// serve both breakpoints so there is one source for the markup.
+const renderMeta = (item: ExperienceType) => (
+  <>
+    <h3 className={"text-lg md:text-xl text-neutral-400"}>{item.duration}</h3>
+    <h3 className={"text-2xl md:text-3xl"}>{item.title}</h3>
+    <h3 className={"text-xl md:text-2xl text-neutral-500"}>{item.company}</h3>
+  </>
+);
+
 export const Timeline = ({ data }: { data: ExperienceType[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -50,24 +61,20 @@ export const Timeline = ({ data }: { data: ExperienceType[] }) => {
 
               <div
                 className={
-                  "flex-col hidden gap-2 text-xl font-bold md:flex md:pl-20 md:text-3xl text-neutral-300"
+                  "flex-col hidden gap-2 font-bold md:flex md:pl-20 text-neutral-300"
                 }
               >
-                <h3 className={"text-xl text-neutral-400"}>{item.duration}</h3>
-                <h3 className={"text-3xl"}>{item.title}</h3>
-                <h3 className={"text-2xl text-neutral-500"}>{item.company}</h3>
+                {renderMeta(item)}
               </div>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
               <div
                 className={
-                  "block mb-4 text-2xl font-bold text-left text-neutral-300 md:hidden"
+                  "block mb-4 font-bold text-left text-neutral-300 md:hidden"
                 }
               >
-                <h3 className={"text-lg text-neutral-400"}>{item.duration}</h3>
-                <h3 className={"text-2xl"}>{item.title}</h3>
-                <h3 className={"text-xl text-neutral-500"}>{item.company}</h3>
+                {renderMeta(item)}
               </div>
               {item.description.map((item, index) => (
                 <p key={index} className={"mb-3 font-normal text-neutral-400"}>

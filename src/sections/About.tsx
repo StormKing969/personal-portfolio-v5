@@ -1,4 +1,5 @@
 import { Globe } from "../components/Globe.tsx";
+import WebGLErrorBoundary from "../components/WebGLErrorBoundary.tsx";
 import CopyEmailButton from "../components/CopyEmailButton.tsx";
 import { Frameworks } from "../components/Frameworks.tsx";
 import {
@@ -76,7 +77,9 @@ const About = () => {
             <p className={"subtext"}>{Card3Context}</p>
           </div>
           <figure className={"absolute left-[30%] top-[10%]"}>
-            <Globe />
+            <WebGLErrorBoundary>
+              <Globe />
+            </WebGLErrorBoundary>
           </figure>
         </div>
 

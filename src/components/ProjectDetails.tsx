@@ -35,11 +35,12 @@ const ProjectDetails = ({
       >
         <button
           onClick={onClose}
+          aria-label="Close project details"
           className={
             "absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500"
           }
         >
-          <img src={assetUrl("close.svg")} alt="close" className={"w-6 h-6"} />
+          <img src={assetUrl("close.svg")} alt="" className={"w-6 h-6"} />
         </button>
         <img
           src={projectAsset(id, projectImage)}
@@ -79,6 +80,8 @@ const ProjectDetails = ({
               {liveLink && (
                 <a
                   href={liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={
                     "inline-flex items-center gap-1 font-medium cursor-pointer hover-animation"
                   }
@@ -86,24 +89,28 @@ const ProjectDetails = ({
                   Live Site{" "}
                   <img
                     src={assetUrl("arrow-up.svg")}
-                    alt={"arrow-up"}
+                    alt=""
                     className={"size-4"}
                   />
                 </a>
               )}
-              <a
-                href={repoLink}
-                className={
-                  "inline-flex items-center gap-1 font-medium cursor-pointer hover-animation"
-                }
-              >
-                GitHub Repo{" "}
-                <img
-                  src={assetUrl("arrow-up.svg")}
-                  alt={"arrow-up"}
-                  className={"size-4"}
-                />
-              </a>
+              {repoLink && (
+                <a
+                  href={repoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={
+                    "inline-flex items-center gap-1 font-medium cursor-pointer hover-animation"
+                  }
+                >
+                  GitHub Repo{" "}
+                  <img
+                    src={assetUrl("arrow-up.svg")}
+                    alt=""
+                    className={"size-4"}
+                  />
+                </a>
+              )}
             </div>
           </div>
         </div>

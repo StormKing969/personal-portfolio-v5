@@ -42,23 +42,25 @@ export const Card4Context: string = "Interested in collaborating on a project?";
 
 export const EmailAddress: string = "sajanawij@gmail.com";
 
-export const Card5Skills: string[] = [
-  "auth0.svg",
-  "azure.svg",
-  "css3.svg",
-  "git.svg",
-  "github.svg",
-  "html5.svg",
-  "javascript.svg",
-  "microsoft.svg",
-  "microsoftsqlserver.svg",
-  "react.svg",
-  "stripe.svg",
-  "tailwindcss.svg",
-  "threejs.svg",
-  "visualstudiocode.svg",
-  "vitejs.svg",
-  "wordpress.svg",
+export type Skill = { file: string; label: string };
+
+export const Card5Skills: Skill[] = [
+  { file: "auth0.svg", label: "Auth0" },
+  { file: "azure.svg", label: "Azure" },
+  { file: "css3.svg", label: "CSS3" },
+  { file: "git.svg", label: "Git" },
+  { file: "github.svg", label: "GitHub" },
+  { file: "html5.svg", label: "HTML5" },
+  { file: "javascript.svg", label: "JavaScript" },
+  { file: "microsoft.svg", label: "Microsoft" },
+  { file: "microsoftsqlserver.svg", label: "Microsoft SQL Server" },
+  { file: "react.svg", label: "React" },
+  { file: "stripe.svg", label: "Stripe" },
+  { file: "tailwindcss.svg", label: "Tailwind CSS" },
+  { file: "threejs.svg", label: "Three.js" },
+  { file: "visualstudiocode.svg", label: "Visual Studio Code" },
+  { file: "vitejs.svg", label: "Vite" },
+  { file: "wordpress.svg", label: "WordPress" },
 ];
 
 export const Card5Title: string = "Technical Expertise";

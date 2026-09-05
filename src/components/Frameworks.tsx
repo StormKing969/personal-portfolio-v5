@@ -4,25 +4,33 @@ import { assetUrl } from "../utils/asset.ts";
 
 export const Frameworks = () => {
   return (
-    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
+    <div className="relative flex h-60 w-full flex-col items-center justify-center">
       <OrbitingCircles iconSize={40}>
         {Card5Skills.map((skill, i) => (
-          <Icons key={i} src={assetUrl(`logos/${skill}`)} />
+          <Icons
+            key={i}
+            src={assetUrl(`logos/${skill.file}`)}
+            alt={skill.label}
+          />
         ))}
       </OrbitingCircles>
       <OrbitingCircles iconSize={25} radius={100} reverse speed={2}>
-        {Card5Skills.reverse().map((skill, i) => (
-          <Icons key={i} src={assetUrl(`logos/${skill}`)} />
+        {[...Card5Skills].reverse().map((skill, i) => (
+          <Icons
+            key={i}
+            src={assetUrl(`logos/${skill.file}`)}
+            alt={skill.label}
+          />
         ))}
       </OrbitingCircles>
     </div>
   );
 };
 
-const Icons = ({ src }: { src: string }) => (
+const Icons = ({ src, alt }: { src: string; alt: string }) => (
   <img
     src={src}
-    alt="icon img"
+    alt={alt}
     className={"rounded-sm hover:scale-110 duration-200"}
   />
 );

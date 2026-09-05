@@ -52,7 +52,7 @@ const Project = ({
           <img
             src={assetUrl("arrow-right.svg")}
             className={"w-5"}
-            alt={"arrow-right"}
+            alt={""}
           />
         </button>
 

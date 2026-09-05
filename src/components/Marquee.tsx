@@ -45,7 +45,7 @@ export function Marquee({
     <div
       {...props}
       className={twMerge(
-        `group flex [gap:var(--gap)] overflow-hidden p-2 [--duration:40s] [--gap:1rem] ${!vertical ? "flex-row" : "flex-col"}`,
+        `group flex gap-(--gap) overflow-hidden p-2 [--duration:40s] [--gap:1rem] ${!vertical ? "flex-row" : "flex-col"}`,
 
         className,
       )}
@@ -56,7 +56,7 @@ export function Marquee({
           <div
             key={i}
             className={twMerge(
-              "flex shrink-0 justify-around [gap:var(--gap)]",
+              "flex shrink-0 justify-around gap-(--gap)",
               !vertical
                 ? "animate-marquee flex-row"
                 : "animate-marquee-vertical flex-col",

@@ -28,7 +28,7 @@ const ProjectDetails = ({
     >
       <motion.div
         className={
-          "relative max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10"
+          "relative max-w-2xl border shadow-sm rounded-2xl bg-linear-to-l from-midnight to-navy border-white/10"
         }
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -52,7 +52,7 @@ const ProjectDetails = ({
         <div className={"p-5"}>
           <h5 className={"mb-2 text-2xl font-bold text-white"}>{title}</h5>
           <p className={"mb-3 font-normal text-neutral-400"}>{description}</p>
-          <ul className={"max-h-[200px] overflow-y-auto pr-[2px]"}>
+          <ul className={"max-h-[200px] overflow-y-auto pr-0.5"}>
             {subDescription &&
               subDescription.map((desc: string, index: number) => (
                 <li

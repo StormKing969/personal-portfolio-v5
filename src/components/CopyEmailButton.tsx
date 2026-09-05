@@ -28,7 +28,7 @@ const CopyEmailButton = () => {
       whileHover={{ y: -5 }}
       whileTap={{ scale: 1.05 }}
       className={
-        "relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden"
+        "relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-48 cursor-pointer overflow-hidden"
       }
     >
       <AnimatePresence mode={"wait"}>
@@ -57,7 +57,11 @@ const CopyEmailButton = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.1 }}
           >
-            <img src={assetUrl("copy.svg")} alt="copy image" className={"w-5"} />
+            <img
+              src={assetUrl("copy.svg")}
+              alt="copy image"
+              className={"w-5"}
+            />
             Copy Email Address
           </motion.p>
         )}

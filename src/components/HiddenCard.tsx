@@ -17,8 +17,8 @@ const HiddenCard = ({ phase, title, content }: ApproachType) => {
         transition={{ duration: 0.4 }}
         className="relative z-10"
       >
-        <div className="relative flex items-center justify-center text-center w-[350px] h-[400px] rounded-lg border-[2px] border-gray-400">
-          <div className={"p-[2px] relative overflow-hidden rounded-lg"}>
+        <div className="relative flex items-center justify-center text-center w-[350px] h-[400px] rounded-lg border-2 border-gray-400">
+          <div className={"p-0.5 relative overflow-hidden rounded-lg"}>
             <div
               className="absolute top-1/2 left-1/2 w-[350px] h-[400px] animate-spin-slow"
               style={{
@@ -29,7 +29,7 @@ const HiddenCard = ({ phase, title, content }: ApproachType) => {
 
             <div
               className={
-                "relative flex items-center justify-center bg-[#030412] px-6 py-2 rounded-lg"
+                "relative flex items-center justify-center bg-primary px-6 py-2 rounded-lg"
               }
             >
               <h2 className={"text-heading"}>Phase {phase}</h2>
@@ -49,7 +49,9 @@ const HiddenCard = ({ phase, title, content }: ApproachType) => {
         className="absolute z-0 text-center"
       >
         <div
-          className={"flex flex-col items-center gap-4 px-4 py-6 rounded-lg transition-colors duration-500 max-w-xl"}
+          className={
+            "flex flex-col items-center gap-4 px-4 py-6 rounded-lg transition-colors duration-500 max-w-xl"
+          }
         >
           <h2 className="text-heading">{title}</h2>
           <p className="subtext">{content}</p>

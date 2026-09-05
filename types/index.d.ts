@@ -43,10 +43,10 @@ export interface ReviewType {
 }
 
 export interface ApproachType {
-    phase: string;
-    title: string;
-    content: string;
-    bgColor: string;
+  phase: string;
+  title: string;
+  content: string;
+  bgColor: string;
 }
 
 export interface PreviewType {

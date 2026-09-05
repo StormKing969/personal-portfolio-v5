@@ -63,22 +63,24 @@ const Navbar = () => {
             transition={{ duration: 1 }}
           >
             <nav className={"pb-5"}>
-              {NavLinks.map(
-                (
-                  { title, link }: { title: string; link: string },
-                  index: number,
-                ) => (
-                  <li key={index} className={"nav-li"}>
-                    <a
-                      className={"nav-link"}
-                      href={link}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {title}
-                    </a>
-                  </li>
-                ),
-              )}
+              <ul>
+                {NavLinks.map(
+                  (
+                    { title, link }: { title: string; link: string },
+                    index: number,
+                  ) => (
+                    <li key={index} className={"nav-li"}>
+                      <a
+                        className={"nav-link"}
+                        href={link}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {title}
+                      </a>
+                    </li>
+                  ),
+                )}
+              </ul>
             </nav>
           </motion.div>
         )}

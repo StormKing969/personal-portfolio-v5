@@ -10,12 +10,18 @@ export const Timeline = ({ data }: { data: ExperienceType[] }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
 
+  // Keep `height` in sync with the content: it drives the animated timeline
+  // line's length. A one-shot measure goes stale on resize/reflow (e.g. the
+  // line kept its desktop length at mobile width), so observe the element.
   useEffect(() => {
-    if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
-    }
-  }, [ref]);
+    const el = ref.current;
+    if (!el) return;
+    const measure = () => setHeight(el.getBoundingClientRect().height);
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -26,7 +32,10 @@ export const Timeline = ({ data }: { data: ExperienceType[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="c-space section-spacing overflow-hidden" ref={containerRef}>
+    <div
+      className="relative c-space section-spacing overflow-hidden"
+      ref={containerRef}
+    >
       <h2 className={"text-heading"}>{ExperienceTitle} </h2>
       <div ref={ref} className="relative pb-20">
         {data.map((item, index) => (

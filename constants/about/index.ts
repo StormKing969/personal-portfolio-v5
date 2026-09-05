@@ -1,7 +1,7 @@
 export const Card1Title: string = "Hi, I'm Sajana Wijesinghe";
 
 export const Card1Context: string =
-  "Over the past four years I have advanced both frontend and backend capabilities to deliver robust, production-grade web applications.";
+  "Over the past three years I have advanced both frontend and backend capabilities to deliver robust, production-grade web applications.";
 
 export const BehavioralQualities: string[] = [
   "Active Listener",
